@@ -4,22 +4,21 @@
  * User: guill
  * Date: 07/09/2018
  * Time: 14:50
- */?>
-
-
-<div class="tz-gallery">
-    <div class="row">
-
-        <div class="col-sm-6 col-md-4">
+ */
+ 
+ $nb_fichier = 0;
+ if($dossier = opendir('./assets/upload/'.$titre)){
+	 while(($fichier = readdir($dossier)) !== false ){
+			 if($fichier != '.' && $fichier != '..'){
+				$photo[] = $fichier;
+			 }
+		 }
+	 }
+ 
+ foreach($photo as $photo){
+	echo ' <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-                <a class="lightbox" href="<?=base_url()?>assets/images/park.jpg">
-                    <img src="<?=base_url()?>assets/images/park.jpg" alt="Park">
-                </a>
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
+				<img src="'.base_url().'assets/upload/'.$titre.'/'.$photo.'" alt="Harley1">
             </div>
-        </div>
-    </div>
-</div>
+        </div>' ;
+ }

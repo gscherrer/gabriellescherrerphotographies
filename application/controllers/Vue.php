@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Vue extends CI_Controller {
 
-    public function __construct(){
+    public function __construct()
+	{
         parent::__construct();
         $this->load->helper('url');
     }
@@ -13,6 +14,16 @@ class Vue extends CI_Controller {
 		$this->load->view('home');
         $this->load->view('footer');
 	}
+	public function logIn(){
+		
+	}
+	private function isLogged()
+    {
+        if ($this->session->userdata('id') == null) {
+            return false;
+        }
+        return true;
+    }
 	/*public function home()
 	{
 		$this->load->view('menu');
@@ -24,8 +35,21 @@ class Vue extends CI_Controller {
         $this->load->view('footer');
 	}
 	public function galleriePrivee(){
+		$this->load->model('m_mariage');
+		$data['mariage'] = $this->m_mariage->getAllMariage();
+		$file = 'test.txt';
+		
 		$this->load->view('menu');
-		$this->load->view('galleriePrivee.php');
+		$this->load->view('galleriePrivee.php', $data);
+        $this->load->view('footer');
+	}
+	public function espacemaries(){
+		if(!$this->isLogged()){
+			redirect(base_url(''));
+		}
+	
+		$this->load->view('menu');
+		$this->load->view('espacemaries.php', $data);
         $this->load->view('footer');
 	}
 }
