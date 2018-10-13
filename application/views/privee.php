@@ -5,7 +5,13 @@
  * Date: 07/09/2018
  * Time: 14:50
  */
- 
+ echo '
+ <div class="text-center">
+ <button type="button" class="btn btn-primary">Télécharger les photos</button> 
+ </br>
+ </div>
+ ' ;
+
  $nb_fichier = 0;
  if($dossier = opendir('./assets/upload/'.$titre)){
 	 while(($fichier = readdir($dossier)) !== false ){

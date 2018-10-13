@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="D:\wamp64\www\gabrielle\gabrielle.workspace">
-  <int Value="1" Name="m_selectedTab"/>
+  <int Value="0" Name="m_selectedTab"/>
   <wxString Value="D:\wamp64\www\gabrielle\gabrielle.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="D:\wamp64\www\gabrielle\application\controllers\Vue.php" Name="FileName"/>
-      <int Value="6" Name="FirstVisibleLine"/>
-      <int Value="21" Name="CurrentLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="26" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="D:\wamp64\www\gabrielle\application\controllers\Gallerie.php" Name="FileName"/>
-      <int Value="28" Name="FirstVisibleLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
       <int Value="47" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
@@ -33,7 +33,7 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="D:\wamp64\www\gabrielle\application\views\menu.php" Name="FileName"/>
-      <int Value="57" Name="FirstVisibleLine"/>
+      <int Value="33" Name="FirstVisibleLine"/>
       <int Value="34" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
@@ -48,6 +48,13 @@
     <TabInfo>
       <wxString Value="D:\wamp64\www\gabrielle\application\views\espacemaries.php" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="D:\wamp64\www\gabrielle\application\config\config.php" Name="FileName"/>
+      <int Value="4" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>

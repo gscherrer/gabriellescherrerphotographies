@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>GS photographie</title>
+    <title>GS Photographie</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
@@ -33,14 +33,9 @@
       </div>
       <div class="modal-body">
 		<form action="<?= base_url('Gallerie/loginDL')?>" method="post">
-		  <!-- <div class="form-group">
-		   
-			<label for="userEmail">Email address</label>
-			<input type="text" class="form-control" id="userEmail" name="userEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
-			<small id="emailHelp" class="form-text text-muted">Nous avons besoins de votre adresse pour vous envoyer le lien de téléchargement.</small>
-		  </div> -->
+		  
 		  <div class="form-group">
-			<label for="userPassword">Password</label>
+			<label for="userPassword">Mot de passe</label>
 			<input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="Password" required>
 				<small id="emailHelp" class="form-text text-muted">Mot de passe fournis par les mariés</small>
 		  </div>
@@ -70,14 +65,12 @@
       <div class="modal-body">
 		<form action="<?= base_url('Gallerie/login')?>" method="post">
 			<div class="form-group">
-			<label for="userEmail">Email address</label>
-			<input type="text" class="form-control" id="userEmail" name="userEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
-			<small id="emailHelp" class="form-text text-muted">Nous avons besoins de votre adresse pour vous envoyer le lien de téléchargement.</small>
+				<label for="userEmail">Adresse mail</label>
+				<input type="text" class="form-control" id="userEmail" name="userEmail" aria-describedby="emailHelp" placeholder="Entrer votre email" required>
 		  </div> 
 		  <div class="form-group">
-			<label for="userPassword">Password</label>
-			<input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="Password" required>
-				<small id="emailHelp" class="form-text text-muted">Mot de passe fournis par les mariés</small>
+			<label for="userPassword">Mot de passe</label>
+			<input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="Entrer votre mot de passe" required>
 		  </div>
 		  <input type="hidden" class="form-control" id="titreMariage" name="titreMariage" value="mariageTest" >
 		  
@@ -85,21 +78,23 @@
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-				<input class="btn btn-primary modal-login-btn" name="submit" value="Recevoir le lien de téléchargement." type="submit">
+				<input class="btn btn-primary modal-login-btn" name="submit" value="Connexion" type="submit">
 			  </div>
 		</form>
     </div>
   </div>
 </div>
-<div class="container gallery-container">
+<row class="text-center">
+	<div class="container gallery-container ">
 
-    <h1>Bootstrap 3 Gallery</h1>
+		<h1>Gabrielle Scherrer Photographie</h1>
 
-    <p class="page-description text-center">Thumbnails With Title And Description</p>
-   <ul class="nav nav-tabs">
-      <li role="presentation"><a href="<?= base_url() ?>">Home</a></li>
-      <li role="presentation"><a href="<?= base_url() ?>vue/galleriePublique">Gallerie publique</a></li>
-      <li role="presentation"><a href="<?= base_url() ?>vue/galleriePrivee">Gallerie privée</a></li>
-		<li role="presentation"><a  data-toggle="modal" data-target="#modalLogon">Espace mariés</a></li>
- </ul>
-</div>
+		<p class="page-description">Vos photos de mariage</p>
+	   <ul class="list-inline justify-content-center">
+		  <li role="presentation"><a href="<?= base_url() ?>">Home</a></li>
+		  <li role="presentation"><a href="<?= base_url() ?>vue/galleriePublique">Galerie publique</a></li>
+		  <li role="presentation"><a href="<?= base_url() ?>vue/galleriePrivee">Galerie privée</a></li>
+			<li role="presentation"><a  data-toggle="modal" data-target="#modalLogon">Connexion</a></li>
+	 </ul>
+	</div>
+</row>

@@ -17,18 +17,7 @@ class Vue extends CI_Controller {
 	public function logIn(){
 		
 	}
-	private function isLogged()
-    {
-        if ($this->session->userdata('id') == null) {
-            return false;
-        }
-        return true;
-    }
-	/*public function home()
-	{
-		$this->load->view('menu');
-		$this->load->view('home');
-	}*/
+
 	public function galleriePublique(){
 		$this->load->view('menu');
 		$this->load->view('galleriePublique.php');

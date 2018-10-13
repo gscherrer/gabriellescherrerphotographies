@@ -1,4 +1,3 @@
-
 <div class="tz-gallery">
 
     <div class="row">
