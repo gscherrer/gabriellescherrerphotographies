@@ -26,7 +26,6 @@ class Vue extends CI_Controller {
 	public function galleriePrivee(){
 		$this->load->model('m_mariage');
 		$data['mariage'] = $this->m_mariage->getAllMariage();
-		$file = 'test.txt';
 		
 		$this->load->view('menu');
 		$this->load->view('galleriePrivee.php', $data);

@@ -1,19 +1,17 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: guill
- * Date: 07/09/2018
- * Time: 14:50
- */
- echo '
+
  <div class="text-center">
  <button type="button" class="btn btn-primary">Télécharger les photos</button> 
  </br>
  </div>
- ' ;
+<i class="glyphicon glyphicon-folder-open style='color: blue;'">
+
+
+ <?php
+ 
 
  $nb_fichier = 0;
- if($dossier = opendir('./assets/upload/'.$titre)){
+ var_dump($titre);
+ if($dossier = opendir('./assets/images/privee/'.$titre)){
 	 while(($fichier = readdir($dossier)) !== false ){
 			 if($fichier != '.' && $fichier != '..'){
 				$photo[] = $fichier;

@@ -26,7 +26,7 @@
     <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Mariage de A et B</h5>
+        <h5 class="modal-title" id="dlModalTitle">Mariage de A et B (à remplacer)</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -39,13 +39,13 @@
 			<input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="Password" required>
 				<small id="emailHelp" class="form-text text-muted">Mot de passe fournis par les mariés</small>
 		  </div>
-		  <input type="hidden" class="form-control" id="titreMariage" name="titreMariage" value="mariageTest" hidden>
+		  <input type="hidden" class="form-control" id="dlTitreMariage" name="dlTitreMariage" value="" hidden>
 		  
 
 			  </div>
 			  <div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-				<input class="btn btn-primary modal-login-btn" name="submit" value="Recevoir le lien de téléchargement." type="submit">
+				<button class="btn btn-primary modal-login-btn" name="submit" type="submit" id="downloadLink">Recevoir le lien de téléchargement. </button>
 			  </div>
 		</form>
     </div>
@@ -72,7 +72,7 @@
 			<label for="userPassword">Mot de passe</label>
 			<input type="password" class="form-control" id="userPassword" name="userPassword" placeholder="Entrer votre mot de passe" required>
 		  </div>
-		  <input type="hidden" class="form-control" id="titreMariage" name="titreMariage" value="mariageTest" >
+		  <input type="hidden" class="form-control" id="titreMariage" name="titreMariage" value="" >
 		  
 
 			  </div>
@@ -91,10 +91,10 @@
 
 		<p class="page-description">Vos photos de mariage</p>
 	   <ul class="list-inline justify-content-center">
-		  <li role="presentation"><a href="<?= base_url() ?>">Home</a></li>
-		  <li role="presentation"><a href="<?= base_url() ?>vue/galleriePublique">Galerie publique</a></li>
-		  <li role="presentation"><a href="<?= base_url() ?>vue/galleriePrivee">Galerie privée</a></li>
-			<li role="presentation"><a  data-toggle="modal" data-target="#modalLogon">Connexion</a></li>
+			<li role="presentation"><a href="<?= base_url() ?>">Home</a></li>
+			<li role="presentation"><a href="<?= base_url() ?>vue/galleriePublique">Galerie publique</a></li>
+			<li role="presentation"><a href="<?= base_url() ?>vue/galleriePrivee">Galerie privée</a></li>
+			<li role="presentation"><a data-toggle="modal" data-target="#modalLogon">Connexion</a></li>
 	 </ul>
 	</div>
 </row>

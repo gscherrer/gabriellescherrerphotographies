@@ -4,11 +4,10 @@
 		<?php  foreach ($mariage as $mariage){  ?>
 			<div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-                <a class="lightbox" href="<?=base_url()?>assets/images/tunnel.jpg">
-                    <img src="<?=base_url()?>assets/images/tunnel.jpg" alt="Tunnel">
-                </a>
+                    <img src="<?=base_url()?>assets/images/privee/<?php echo $mariage['titreMariage']?>/<?php echo $mariage['mariage_pic']?>" alt="Tunnel">
                 <div class="caption">
-                    <h3><?php echo $mariage['titreMariage'] ?></h3>
+                    <h3 id="mariageTitle"><?php echo $mariage['titreMariage'] ?></h3>
+					<input type="hidden" id="hiddenMariageTitle" value="<?php echo $mariage['titreMariage'] ?>">
                     <p><?php echo $mariage['description'] ?></p>
 					<button type="button" id="loginModal" class="btn btn-primary" data-toggle="modal" data-target="#exempleModalCenter">  Voir les photos </button>
                 </div>

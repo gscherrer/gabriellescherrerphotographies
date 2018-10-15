@@ -86,13 +86,14 @@ class Gallerie extends CI_Controller
 		
 		$check = password_verify($password, $hash);
         if ($this->input->post('submit') and $check) 
-			{
-				$this->session->set_flashdata('message-success', 'Bienvenue  <i class="fa fa-hand-peace-o"></i> ');
-				redirect(base_url('Gallerie/show/'.$titre));
-            }
-			else{
-				redirect(base_url());
-			}
+		{
+			$this->session->set_flashdata('message-success', 'Bienvenue  <i class="fa fa-hand-peace-o"></i> ');
+			redirect(base_url('Gallerie/show/'.$titre));
+		}
+		else
+		{
+			redirect(base_url('Vue/galleriePrivee'));
+		}
 	}
 	
 	public function show($titre)
