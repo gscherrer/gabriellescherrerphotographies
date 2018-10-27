@@ -85,6 +85,11 @@ class Gallerie extends CI_Controller
 		$hash = $var['0']['downloadPassword'];
 		
 		$check = password_verify($password, $hash);
+		$fp = fopen('lidn.txt', 'w');
+		fwrite($fp,"titre: ".$titre."check:".$check."password: ".$password."hash: ".$hash);
+		fclose($fp);
+		
+		
         if ($this->input->post('submit') and $check) 
 		{
 			$this->session->set_flashdata('message-success', 'Bienvenue  <i class="fa fa-hand-peace-o"></i> ');
