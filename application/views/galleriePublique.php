@@ -15,7 +15,7 @@
  foreach($photo as $photo){
 	echo ' <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-				<img src="'.base_url().'assets/images/public/'.$photo.'">
+				<img class="img-thumbnail" src="'.base_url().'assets/images/public/'.$photo.'">
             </div>
         </div>' ;
  }

@@ -4,7 +4,7 @@
 		<?php  foreach ($mariage as $mariage){  ?>
 			<div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-                    <img src="<?=base_url()?>assets/images/privee/<?php echo $mariage['titreMariage']?>/<?php echo $mariage['mariage_pic']?>" alt="Tunnel">
+                    <img class="img-thumbnail" src="<?=base_url()?>assets/images/privee/<?php echo $mariage['titreMariage']?>/<?php echo $mariage['mariage_pic']?>" alt="Tunnel">
                 <div class="caption">
                     <h3 id="mariageTitle"><?php echo $mariage['titreMariage'] ?></h3>
 					<input type="hidden" id="hiddenMariageTitle" value="<?php echo $mariage['titreMariage'] ?>">

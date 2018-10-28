@@ -16,6 +16,8 @@ $(document).ready(function() {
   
   $('#downloadLink').click(function() {
 	  var titre = $('#hiddenMariageTitle').val();
-	  $('#dlTitreMariage').val(titre);
+	  var title=titre.replace(/ /g, "");
+	  $('#dlTitreMariage').val(title);
+	  alert(title);
   });
 });

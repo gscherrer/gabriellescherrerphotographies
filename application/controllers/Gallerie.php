@@ -79,18 +79,18 @@ class Gallerie extends CI_Controller
     public function loginDl()
     {
         $password = $this->input->post('userPassword');
-		$titre = $this->input->post('titreMariage');
+		$titre = $this->input->post('dlTitreMariage');
 		$this->load->model('m_mariage');
 		$var = $this->m_mariage->getMariageByTitle($titre);
 		$hash = $var['0']['downloadPassword'];
 		
 		$check = password_verify($password, $hash);
 		$fp = fopen('lidn.txt', 'w');
-		fwrite($fp,"titre: ".$titre."check:".$check."password: ".$password."hash: ".$hash);
+		fwrite($fp,"titre: ".$titre." check:".$check." password: ".$password." hash: ".$hash);
 		fclose($fp);
 		
 		
-        if ($this->input->post('submit') and $check) 
+        if ($check) 
 		{
 			$this->session->set_flashdata('message-success', 'Bienvenue  <i class="fa fa-hand-peace-o"></i> ');
 			redirect(base_url('Gallerie/show/'.$titre));

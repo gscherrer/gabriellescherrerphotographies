@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>GS Photographie</title>
+<link rel="shortcut icon"  >
+<link rel = "icon" type = "image/png" href="./assets/images/logo1.png">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><!-- 	<link rel="stylesheet" href="<?= base_url().'assets/bootstrap-4.0.0/assets/css/bootstrap.min.css'?>"> -->
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
     <link rel="stylesheet" href="<?= base_url().'assets/css/thumbnail-gallery.css'?>">
@@ -84,7 +86,22 @@
     </div>
   </div>
 </div>
-<row class="text-center">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<img class="img-thumbnail" style="width: 100px" src="./assets/images/logo1.png">
+  <a class="navbar-brand" href="#">Gabrielle Scherrer Photographie</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active"href="<?= base_url() ?>">Home</a>
+      <a class="nav-item nav-link" href="<?= base_url() ?>vue/galleriePublique">Galerie publique</a>
+      <a class="nav-item nav-link" href="<?= base_url() ?>vue/galleriePrivee">Galerie privée</a>
+		<a class="nav-item nav-link" data-toggle="modal" data-target="#modalLogon">Connexion</a>
+    </div>
+  </div>
+</nav>
+<!-- <row class="text-center">
 	<div class="container gallery-container ">
 
 		<h1>Gabrielle Scherrer Photographie</h1>
@@ -97,4 +114,4 @@
 			<li role="presentation"><a data-toggle="modal" data-target="#modalLogon">Connexion</a></li>
 	 </ul>
 	</div>
-</row>
+</row> -->
