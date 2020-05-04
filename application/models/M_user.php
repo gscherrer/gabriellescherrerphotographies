@@ -13,14 +13,21 @@ class m_user extends CI_Model
         parent::__construct();
         $this->load->database();
     }
-	public function setUser(){
-		
+	public function setUser($name, $password)
+	{
+			$data = array(
+				'id' => '',
+				'nom' => $name,
+				'password' => $password,
+			);
+			if($this->db->insert('user', $data)){
+				return true;
+			}
+			else return false;
 	}
 	
-	public function login(){
-		
-	}
-	public function getUser($mail){
+	public function getUser($mail)
+	{
         $sql = "SELECT * FROM user WHERE user.mail ='".$mail."'";
         $query = $this->db->query($sql);
         return $query->result_array();

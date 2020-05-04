@@ -13,7 +13,7 @@ class Gallerie extends CI_Controller
     }
 	function isLogged()
     {
-        if ($this->session->userdata('id') != null && $this->session->userdata('level') == 'admin' ) {
+        if ($this->session->userdata('id') != null ) {
             return true;
         }
         return false;
@@ -46,36 +46,42 @@ class Gallerie extends CI_Controller
 		
 		$check = password_verify($password, $hash);
         if ($this->input->post('submit') and $check) 
-			{
-				$newdata = array(
-					'iduser' 	=> $iduser,
-					'email'     => $mail,
-					'idmariage' => $idmariage,
-					'logged_in' => TRUE,
-					'level'		=> $level
-				);
-				$this->session->set_userdata($newdata);
-				$file = 'test.txt';
-		// Ouvre un fichier pour lire un contenu existant
-		$current = file_get_contents($file);
-		$current = $idmariage."\n";
-		// Écrit le résultat dans le fichier
-		file_put_contents($file, $this->session->email, FILE_APPEND);
-				$this->session->set_flashdata('message-success', 'Bienvenue  <i class="fa fa-hand-peace-o"></i> ');
-            }
-			else{
-				redirect(base_url());
+		{
+			$newdata = array(
+				'iduser' 	=> $iduser,
+				'email'     => $mail,
+				'idmariage' => $idmariage,
+				'logged_in' => TRUE,
+				'level'		=> $level
+			);
+			$this->session->set_userdata($newdata);
+			/*$file = 'test.txt';
+			// Ouvre un fichier pour lire un contenu existant
+			$current = file_get_contents($file);
+			$current = $idmariage."\n";
+			// Écrit le résultat dans le fichier
+			file_put_contents($file, $this->session->email, FILE_APPEND);*/
+			
+			$this->session->set_flashdata('message-success', 'Bienvenue  <i class="fa fa-hand-peace-o"></i> ');
+		}
+		else{
+			redirect(base_url());
+		}
+		if($this->session->logged_in == TRUE) {
+			if($this->session->level == 'admin'){
+				redirect(base_url('Admin'));
 			}
-			if($this->session->logged_in == TRUE) {
-				if($this->session->level == 'admin'){
-					redirect(base_url('admin'));
-				}
-				elseif($this->session->level == 'user'){
-					redirect(base_url('Gallerie/espaceMaries/'.$idmariage));
-				}
+			elseif($this->session->level == 'user'){
+				redirect(base_url('Gallerie/espaceMaries/'.$idmariage));
 			}
+		}
 	}
-	
+	public function logout(){
+		//$_SESSION=array();
+		session_destroy(); 
+		redirect(base_url());
+		
+	}
     public function loginDl()
     {
         $password = $this->input->post('userPassword');
@@ -93,7 +99,8 @@ class Gallerie extends CI_Controller
         if ($check) 
 		{
 			$this->session->set_flashdata('message-success', 'Bienvenue  <i class="fa fa-hand-peace-o"></i> ');
-			redirect(base_url('Gallerie/show/'.$titre));
+			redirect(base_url('Gallerie/showpics/messe_'.$titre));
+			var_dump($titre);
 		}
 		else
 		{
@@ -103,12 +110,24 @@ class Gallerie extends CI_Controller
 	
 	public function show($titre)
 	{
-		$data['titre'] = $titre;
+		//var_dump($titre);
+		$title = explode('_', $titre);
+		
+		$data['title'] = $title;	
 		$this->load->view('menu');
-		$this->load->view('privee', $data);
+		$this->load->view('privee2', $data);
         $this->load->view('footer');
 	}
 	
+	public function showPics($titre){
+		//var_dump($titre);
+		$title = explode('_', $titre);
+		$data['titre'] = $title['1'];
+		$data['title'] = $title;
+		$this->load->view('menu');
+		$this->load->view('privee2', $data);
+        $this->load->view('footer');
+	}
 	public function espaceMaries($idmariage){
 		$this->load->model('m_mariage');
 		$data['mariage'] = $this->m_mariage->getMariagebyId($idmariage);

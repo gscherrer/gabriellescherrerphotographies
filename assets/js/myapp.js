@@ -9,15 +9,26 @@
 
 
 $(document).ready(function() {
+
   $('#loginModal').click(function() {
-	  var titre = $('#hiddenMariageTitle').val();
+	  var titre = $('.hiddenMariageTitle').val();
 	  $('#dlModalTitle').text(titre);
   });
-  
-  $('#downloadLink').click(function() {
-	  var titre = $('#hiddenMariageTitle').val();
-	  var title=titre.replace(/ /g, "");
-	  $('#dlTitreMariage').val(title);
-	  alert(title);
-  });
 });
+
+// active les popover pour tout le site
+
+/*$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+$('.popover-dismiss').popover({
+  trigger: 'onhover'
+})
+$(document).ready(function() {
+ $('.privee').hover(function(){
+	alert('privee');
+	//$this.popover('show');
+});});*/
+
+

@@ -1,29 +1,20 @@
-<div class="tz-gallery">
-
-    <div class="row">
-		<?php  foreach ($mariage as $mariage){  ?>
-			<div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                    <img class="img-thumbnail" src="<?=base_url()?>assets/images/privee/<?php echo $mariage['titreMariage']?>/<?php echo $mariage['mariage_pic']?>" alt="Tunnel">
-                <div class="caption">
-                    <h3 id="mariageTitle"><?php echo $mariage['titreMariage'] ?></h3>
-					<input type="hidden" id="hiddenMariageTitle" value="<?php echo $mariage['titreMariage'] ?>">
-                    <p><?php echo $mariage['description'] ?></p>
-					<button type="button" id="loginModal" class="btn btn-primary" data-toggle="modal" data-target="#exempleModalCenter">  Voir les photos </button>
-                </div>
-            </div>
+<div class='container'>
+<div class='row s4'>
+ <?php
+foreach($mariage as $mariage){
+	echo "<div class='col-md-6 col-lg-3'>
+      <div class='card'>
+        <img class='card-img-top' src='".base_url()."assets/uploads/mariage_snapshot/".$mariage['snapshot_link']."'>
+        <div class='card-block'>
+          <h3 class='card-title'>". $mariage['titre']."</h3>
+          <p class='card-text'><a href='".base_url()."vue/download/".$mariage['dl_link']."' class='btn btn-primary'>Télécharger les photos</a></p></br>
         </div>
-		<?php } ?>
-        
-       
-
+      </div>
+    </div>";
+	/*echo $mariage['titre'];
+	echo $mariage['date'];
+	echo $mariage['dl_link'];*/
+}
+?>
+  </div>
 </div>
-
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-<script>
-    baguetteBox.run('.tz-gallery');
-</script>
-</body>
-</html>

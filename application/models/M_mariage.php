@@ -15,8 +15,25 @@ class m_mariage extends CI_Model
         return $query->result_array();
 	}
 	
-	public function setMariage(){
-		
+	public function setMariage($titre, $date, $date_crea, $file_link, $mdp, $snapshot_link){
+			$data = array(
+				'id' => '',
+				'titre' => $titre,
+				'date' => $date,
+				'date_crea' => $date_crea,
+				'dl_link' =>  $file_link,
+				'mdp' =>  $mdp,
+				'snapshot_link' =>  $snapshot_link
+			);
+			if($this->db->insert('mariage', $data)){
+				return true;
+			}
+			else return false;
+	}
+	public function deleteMariage($id){
+		$sql = "DELETE from mariage WHERE id=".$id;
+		$query = $this->db->query($sql);
+		return $query;
 	}
 	
 	public function getMariageByTitle($titre){
@@ -28,12 +45,24 @@ class m_mariage extends CI_Model
 	public function getMariageById($id){
         $sql = "SELECT * FROM mariage WHERE idMariage='".$id."'";
 		$query = $this->db->query($sql);
-        return $query->result_array();
+        return $query->result();
 	}
 	
 	public function getAllMariage(){
 		$sql = 'SELECT * FROM mariage';
 		$query = $this->db->query($sql);
         return $query->result_array();
+	}
+	
+	public function setSnapshotName($id, $file_name){
+		$sql = "UPDATE `mariage` SET `snapshot_link`='".$file_name."' WHERE `id`='".$id."'";
+		$query = $this->db->query($sql);
+        $file = 'snap.txt';
+		// Ouvre un fichier pour lire un contenu existant
+		$current = file_get_contents($file);
+		// Ajoute une personne
+		$current .= $file_name.'- '.$id.' ';
+		// Écrit le résultat dans le fichier
+		file_put_contents($file, $current);
 	}
 }
