@@ -89,6 +89,7 @@ class Admin extends CI_Controller
 		$snapshot_link = $file_link.'snap';
 		$mdp = $this->generatePassword($titre);
 		$this->m_mariage->setMariage($titre, $date, $date_crea, $file_link, $mdp, $snapshot_link);
+		redirect(base_url('admin'));
 	}
 	public function deleteMariage($id){
 		$this->load->model('m_mariage');

@@ -1,68 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session Name="D:\wamp64\www\gabrielle\gabrielle.workspace">
-  <int Value="7" Name="m_selectedTab"/>
-  <wxString Value="D:\wamp64\www\gabrielle\gabrielle.workspace" Name="m_workspaceName"/>
+<Session Name="C:\wamp64\www\gabriellescherrerphotographies\gabrielle.workspace">
+  <int Value="2" Name="m_selectedTab"/>
+  <wxString Value="C:\wamp64\www\gabriellescherrerphotographies\gabrielle.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="D:\wamp64\www\gabrielle\application\controllers\Vue.php" Name="FileName"/>
-      <int Value="16" Name="FirstVisibleLine"/>
-      <int Value="33" Name="CurrentLine"/>
+      <wxString Value="C:\wamp64\www\sophia-polis\application\controllers\Accueil.php" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="15" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="D:\wamp64\www\gabrielle\application\controllers\Gallerie.php" Name="FileName"/>
-      <int Value="75" Name="FirstVisibleLine"/>
-      <int Value="92" Name="CurrentLine"/>
+      <wxString Value="C:\wamp64\www\sophia-polis\application\views\accueil.php" Name="FileName"/>
+      <int Value="105" Name="FirstVisibleLine"/>
+      <int Value="106" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="D:\wamp64\www\gabrielle\application\views\galleriePrivee.php" Name="FileName"/>
-      <int Value="10" Name="FirstVisibleLine"/>
-      <int Value="11" Name="CurrentLine"/>
+      <wxString Value="C:\wamp64\www\sophia-polis\application\views\menu\menu-2.php" Name="FileName"/>
+      <int Value="27" Name="FirstVisibleLine"/>
+      <int Value="42" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="D:\wamp64\www\gabrielle\application\views\menu.php" Name="FileName"/>
-      <int Value="24" Name="FirstVisibleLine"/>
-      <int Value="41" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="D:\wamp64\www\gabrielle\application\models\M_mariage.php" Name="FileName"/>
+      <wxString Value="C:\wamp64\www\sophia-polis\application\views\intervenants2020.php" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="D:\wamp64\www\gabrielle\assets\js\myapp.js" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="17" Name="CurrentLine"/>
+      <wxString Value="C:\wamp64\www\sophia-polis\application\views\menu\footer.html" Name="FileName"/>
+      <int Value="5" Name="FirstVisibleLine"/>
+      <int Value="6" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="D:\wamp64\www\gabrielle\lidn.txt" Name="FileName"/>
+      <wxString Value="C:\wamp64\www\sophia-polis\application\views\menu\footer-articles.php" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="D:\wamp64\www\gabrielle\application\views\privee.php" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="13" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="D:\wamp64\www\gabrielle\application\views\galleriePublique.php" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="24" Name="CurrentLine"/>
+      <int Value="2" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -70,5 +49,5 @@
   <SerializedObject Name="m_breakpoints">
     <long Value="0" Name="Count"/>
   </SerializedObject>
-  <wxString Value="*.c;*.cpp;*.cxx;*.cc;*.h;*.hpp;*.inc;*.mm;*.m;*.xrc" Name="m_findInFilesMask"/>
+  <wxString Value="*.php;*.inc;*.phtml;*.js;*.html;*.css;*.scss;*.json;*.xml;*.ini;*.md;*.txt;*.text;.htaccess;*.sql" Name="m_findInFilesMask"/>
 </Session>

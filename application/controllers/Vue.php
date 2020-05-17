@@ -52,6 +52,23 @@ class Vue extends CI_Controller {
 		$this->load->view('espacemaries.php', $data);
         $this->load->view('footer');
 	}
+	public function dlPhoto(){
+		$mail = $this->input->post('mail');
+		$mdp = $this->input->post('mdp');
+		$this->load->model('m_user');
+		$this->load->model('m_mariage');
+		$user = $this->m_user->getUserByMail($mail);
+var_dump($user);
+		
+		if(password_verify($mdp,$user['0']->password)){
+			$dlLink = $this->m_mariage->getMariageById($user('mariage_id'));
+			$link = $this->download($dlLink);
+			var_dump($link);
+		}
+		else{
+			echo 'Mauvais mot de passe';
+		}
+	}
 	
 	public function download($fileName = NULL) {   
 		$fileName = $fileName.".zip";

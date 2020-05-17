@@ -26,10 +26,10 @@ class m_user extends CI_Model
 			else return false;
 	}
 	
-	public function getUser($mail)
+	public function getUserByMail($mail)
 	{
-        $sql = "SELECT * FROM user WHERE user.mail ='".$mail."'";
+        $sql = "SELECT * FROM user WHERE nom ='".$mail."'";
         $query = $this->db->query($sql);
-        return $query->result_array();
+        return $query->result();
 	}
 }

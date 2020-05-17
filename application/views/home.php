@@ -46,35 +46,32 @@
 
 </div>
 
-<div class="row">
-	<div class="col-lg-8 offset-lg-2 text-center">
+<div class="row text-center">
+	<div class="col-lg-8 offset-lg-2 ">
 		<h3> Contactez-moi! </h3>
 	</div>
 </div>
-
-<div class="row">
-	<div class="col-lg-8 offset-lg-2 text-center" >
-		<div data-form-alert="true"><div hidden="" data-form-alert-success="true">Thanks for filling out form!</div></div>
-		<form action="<?= base_url('Vue/contact'); ?>" method="post" id="contact-form"data-form-title="Contact Form">
-			<!-- <input type="hidden" value="hdTGG/dGxRbsBsfW+ha6SolIpPeurc5HZ7NeJEXrVEp1+16L/ZeT/8DwbWDNbr8HrEujvX91RifxcTw6gUfpwOPULPuNj+Nkf0TXmDIuelLDedXiX5VDTOLmvFiqPylb" data-form-email="true"> -->
-			<div class="form-group">
-				<input type="text" class="form-control" name="name" required="" placeholder="Name*" data-form-field="Name">
+<div class="row text-center">
+	<div class="col-sm-6 offset-sm-3">
+		<form action="<?= base_url('Vue/contact'); ?>" method="post" id="contact-form" data-form-title="Contact Form">
+			<div class="form-group text-center">
+				<input type="text" class="form-control" name="name" required="" placeholder="Nom*" data-form-field="Name">
 			</div>
 			<div class="form-group">
 				<input type="email" class="form-control" id="email" name="email" required="" placeholder="Email*" data-form-field="Email">
 			</div>
 			<div class="form-group">
-				<input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" data-form-field="Phone">
+				<input type="tel" class="form-control" id="phone" name="phone" placeholder="Téléphone" data-form-field="Phone">
 			</div>
 			<div class="form-group">
-				<textarea class="form-control" id="message" name="message" rows="7" placeholder="Message" data-form-field="Message"></textarea>
+				<textarea class="form-control" id="message" name="message" placeholder="Message" data-form-field="Message"></textarea>
 			</div>
-			<div class="text-xs-right">
-				 
+			
 				<input type="submit" name="envoyer" value="Envoyer" class="btn btn-secondary-outline">
-			</div>
+
 		</form>
 	</div>
 </div>
+
 
 
