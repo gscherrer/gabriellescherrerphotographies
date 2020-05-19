@@ -13,17 +13,17 @@ class Vue extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper('directory');
-		
+
 		$map = directory_map('assets/images/public/');
 		$data['photo'] = $map;
-		
+
 		$this->load->view('menu');
 		$this->load->view('home', $data);
         $this->load->view('footer');
 	}
-	
+
 	public function logIn(){
-		
+
 	}
 
 	public function galleriePublique(){
@@ -31,15 +31,15 @@ class Vue extends CI_Controller {
 		$this->load->view('galleriePublique.php');
         $this->load->view('footer');
 	}
-	
+
 	/**
 	 * TODO: à remplacer par une fonction affichant l'ensemble des mariages publié et proposant qq photos (extraits)!
-	 * @return  
+	 * @return
 	 */
 	public function galleriePrivee(){
 		$this->load->model('m_mariage');
 		$data['mariage'] = $this->m_mariage->getAllMariage();
-		
+
 		$this->load->view('menu');
 		$this->load->view('galleriePrivee.php', $data);
         $this->load->view('footer');
@@ -55,26 +55,24 @@ class Vue extends CI_Controller {
 	public function dlPhoto(){
 		$mail = $this->input->post('mail');
 		$mdp = $this->input->post('mdp');
-		$this->load->model('m_user');
 		$this->load->model('m_mariage');
-		$user = $this->m_user->getUserByMail($mail);
-var_dump($user);
-		
-		if(password_verify($mdp,$user['0']->password)){
-			$dlLink = $this->m_mariage->getMariageById($user('mariage_id'));
+		$mariage = $this->m_mariage->getMariageByMail($mail);
+
+		if(password_verify($mdp,$mariage['0']->mdp)){
+			$dlLink = $mariage['0']->dl_link;
 			$link = $this->download($dlLink);
-			var_dump($link);
+		//	var_dump($link);
 		}
 		else{
 			echo 'Mauvais mot de passe';
 		}
 	}
-	
-	public function download($fileName = NULL) {   
+
+	public function download($fileName = NULL) {
 		$fileName = $fileName.".zip";
 		if ($fileName) {
 			$file = "assets/uploads/mariage_zip/".$fileName;
-			// check file exists    
+			// check file exists
 			if (file_exists ( $file )) {
 			 // get file content
 			 $data = file_get_contents ( $file );
@@ -96,7 +94,7 @@ var_dump($user);
 		$subject = 'A venir';
 		$message = $this->input->post('message');
 		$mailBody = $message.'\n de la part de: '.$senderName;
-		
+
 		if( isset($senderName) && isset($from) && isset($message)){
 			$resMail =	$this->send->mail($from, $to='guillaume.scherrer29@gmail.com', $senderName, $subject, $mailBody);
 			$data['resMail'] = $resMail;

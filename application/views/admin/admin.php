@@ -1,20 +1,20 @@
 
 <?php
-	if(!empty($_SESSION['status'])) { 
+	if(!empty($_SESSION['status'])) {
 		echo $_SESSION['status'];
 		unset($_SESSION['status']);
-	} 
-	if(!empty($_SESSION['db'])) { 
+	}
+	if(!empty($_SESSION['db'])) {
 		echo $_SESSION['db'];
 		//unset($_SESSION['db']);
-	} 
+	}
 ?>
 
 <div class="row">
 	<div class="col-md-4 offset-md-4 text-center">
 		<h3> Créer un nouveau mariage </h3>
 	</div>
-</div>	
+</div>
 
 <div class="row">
 	<div class="col-md-4 offset-md-4">
@@ -27,7 +27,11 @@
 			<label for="date">Date du mariage</label>
 			<input type="date" class="form-control" id="date" name="date">
 		  </div>
-		 
+			<div class="form-group">
+			<label for="date">Mail des mariés</label>
+			<input type="mail" class="form-control" id="date" name="mail">
+		  </div>
+
 		  <button type="submit" class="btn btn-primary">Valider</button>
 		</form>
 	</div>
@@ -36,9 +40,9 @@
 <div class="row">
 	<div class="text-center col-md-4 offset-md-4">
 		<h3> Liste des mariages </h3>
-		
+
 	</div>
-</div>	
+</div>
 <table class="table">
 <thead>
 	<tr>
