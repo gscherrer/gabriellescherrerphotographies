@@ -14,34 +14,23 @@
 
         <!-- Grid row-->
         <div class="row">
-
+          <div class="mb-5 flex-center">
+            <h3>Contact</h3><br>
+          </div>
+        </div>
+        <div class="row">
             <!-- Grid column -->
             <div class="col-md-12 py-5">
+
                 <div class="mb-5 flex-center">
 
                     <!-- Facebook -->
-                    <a class="fb-ic">
+                    <a class="fb-ic" href="https://www.facebook.com/gabriellescherrerphotographie/" target="_blank" style="text-decoration: none;">
                         <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                     </a>
-                    <!-- Twitter -->
-                    <a class="tw-ic">
-                        <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                    <!-- Google +-->
-                    <a class="gplus-ic">
-                        <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                    <!--Linkedin -->
-                    <a class="li-ic">
-                        <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
                     <!--Instagram-->
-                    <a class="ins-ic">
+                    <a class="ins-ic" href="https://www.instagram.com/gabriellescherrerphotography/" target="_blank">
                         <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                    <!--Pinterest-->
-                    <a class="pin-ic">
-                        <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
                     </a>
                 </div>
             </div>
@@ -52,12 +41,6 @@
 
     </div>
     <!-- Footer Elements -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
 
 </footer>
 <!-- Footer -->
